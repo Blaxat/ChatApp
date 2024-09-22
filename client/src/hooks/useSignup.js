@@ -10,7 +10,7 @@ export const useSignup = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('http://localhost:4000/api/user/signup', {
+    const response = await fetch('https://rfid-authentication.onrender.com/api/user/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ email, password })
@@ -22,13 +22,10 @@ export const useSignup = () => {
       setError(json.error)
     }
     if (response.ok) {
-      // save the user to local storage
       localStorage.setItem('user', JSON.stringify(json))
 
-      // update the auth context
       dispatch({type: 'LOGIN', payload: json})
 
-      // update loading state
       setIsLoading(false)
     }
   }

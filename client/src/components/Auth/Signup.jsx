@@ -10,7 +10,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/api/user/signup', {
+      const response = await axios.post('https://rfid-authentication.onrender.com/api/user/signup', {
         email,
         password
       });

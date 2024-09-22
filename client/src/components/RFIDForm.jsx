@@ -24,7 +24,7 @@ const RFIDForm = () => {
 
     const newRFID = { rfid, name, phone, email, password };
 
-    const response = await fetch('http://localhost:4000/api/rfid', {
+    const response = await fetch('https://rfid-authentication.onrender.com/api/rfid', {
       method: 'POST',
       body: JSON.stringify(newRFID),
       headers: {

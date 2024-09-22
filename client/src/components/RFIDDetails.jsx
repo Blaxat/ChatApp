@@ -10,7 +10,7 @@ const RFIDDetails = ({ rfid }) => {
       return;
     }
 
-    const response = await fetch('http://localhost:4000/api/rfid', {
+    const response = await fetch('https://rfid-authentication.onrender.com/api/rfid', {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`

@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchRFID = async () => {
-      const response = await fetch('http://localhost:4000/api/rfid', {
+      const response = await fetch('https://rfid-authentication.onrender.com/api/rfid', {
         headers: { 'Authorization': `Bearer ${user.token}` },
       });
       const json = await response.json();
